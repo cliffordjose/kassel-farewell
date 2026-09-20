@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+  <title id="title">Kassel, Germany</title>
+  <desc id="desc">A warm framed illustrated tribute to Kassel, Germany.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#261b1b"/><stop offset=".55" stop-color="#6f2b27"/><stop offset="1" stop-color="#d6a84b"/></linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#261e17"/><stop offset="1" stop-color="#0c0b0a"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="12"/></filter>
+  </defs>
+  <rect width="1000" height="700" fill="#0d0c0a"/>
+  <rect x="30" y="30" width="940" height="640" rx="3" fill="none" stroke="#e8c96a" stroke-width="9"/>
+  <rect x="50" y="50" width="900" height="600" fill="url(#sky)"/>
+  <circle cx="762" cy="170" r="66" fill="#f3d77b" opacity=".8" filter="url(#glow)"/>
+  <circle cx="762" cy="170" r="35" fill="#fff0ad"/>
+  <path d="M50 480 C180 385 270 452 370 386 S560 457 685 394 S835 432 950 375 V650 H50Z" fill="url(#ground)"/>
+  <path d="M135 494 V371 H164 V318 H193 V371 H232 V494 M176 318 V251 H214 V318" fill="none" stroke="#f0ead8" stroke-width="8" opacity=".78"/>
+  <path d="M329 487 V347 H365 V285 H399 V347 H436 V487 M382 285 V218 H415 V285" fill="none" stroke="#f0ead8" stroke-width="7" opacity=".62"/>
+  <path d="M548 478 V385 H580 V336 H612 V385 H648 V478 M596 336 V274 H626 V336" fill="none" stroke="#f0ead8" stroke-width="7" opacity=".66"/>
+  <path d="M716 469 V345 H755 V265 H792 V345 H834 V469 M772 265 V185 H805 V265" fill="none" stroke="#f0ead8" stroke-width="8" opacity=".75"/>
+  <path d="M50 509 Q275 469 494 513 T950 496" fill="none" stroke="#e8c96a" stroke-width="2" opacity=".5"/>
+  <text x="500" y="124" text-anchor="middle" font-family="Georgia, serif" font-size="28" letter-spacing="12" fill="#f0ead8" opacity=".85">GERMANY</text>
+  <text x="500" y="575" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="118" fill="#f0ead8">Kassel</text>
+  <text x="500" y="615" text-anchor="middle" font-family="Georgia, serif" font-size="23" letter-spacing="4" fill="#e8c96a">THE PLACE BEHIND A THOUSAND DREAMS</text>
+</svg>
