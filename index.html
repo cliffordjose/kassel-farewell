@@ -214,10 +214,17 @@
     /* RESPONSIVE */
     @media (max-width: 640px) {
       section { padding: 4rem 1.5rem; }
-      .hero-map { display: block; opacity: 0.04; width: 160vw; right: -50%; top: 40%; }
-      .hero-title { font-size: 4.5rem; margin-top: 1rem; }
-      .hero-subtitle { font-size: 1.15rem; }
-      .hero-actions { justify-content: flex-start; }
+      #hero { min-height: 100svh; padding: 3rem 1.5rem 2rem; justify-content: center; }
+      .hero-map { display: none; }
+      .hero-content { width: 100%; }
+      .hero-eyebrow { margin-bottom: 1.5rem; font-size: .62rem; letter-spacing: .18em; }
+      .hero-title { font-size: clamp(3.9rem, 18vw, 4.5rem); margin-top: 0; margin-bottom: 1rem; }
+      .hero-subtitle { font-size: 1.15rem; margin-bottom: .8rem; }
+      .hero-german { color: var(--text-muted); font-size: .9rem; line-height: 1.45; margin-bottom: 2rem; padding-left: .9rem; }
+      .hero-actions { justify-content: flex-start; flex-direction: column; width: 100%; gap: .7rem; }
+      .hero-cta { justify-content: center; width: 100%; padding: .9rem 1rem; }
+      .hero-year { position: static; max-width: 100%; margin-top: 2rem; color: var(--text-muted); font-size: .6rem; line-height: 1.5; letter-spacing: .12em; text-align: left; }
+      .scroll-indicator { display: none; }
       .big-quote { padding-left: 1rem; }
       .big-quote::before { font-size: 4rem; left: -0.8rem; top: -0.8rem; }
       .gj-pillars { grid-template-columns: 1fr; }
