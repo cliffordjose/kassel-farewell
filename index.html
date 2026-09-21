@@ -121,24 +121,16 @@
     /* MEMORY GALLERY */
     #gallery { background: var(--surface); overflow: hidden; }
     .gallery-intro { max-width: 590px; color: var(--text-muted); margin-bottom: 3.5rem; }
-    .kassel-frame { width: min(100%, 760px); margin: 0 auto 6.5rem; padding: .9rem; border: 1px solid rgba(232,201,106,.48); background: linear-gradient(135deg, rgba(232,201,106,.23), rgba(192,57,43,.18)); box-shadow: 0 24px 55px rgba(0,0,0,.32); transform: rotate(-1.5deg); transition: transform .45s var(--ease), box-shadow .45s var(--ease); }
+    .kassel-frame { width: min(100%, 760px); margin: 0 auto; padding: .9rem; border: 1px solid rgba(232,201,106,.48); background: linear-gradient(135deg, rgba(232,201,106,.23), rgba(192,57,43,.18)); box-shadow: 0 24px 55px rgba(0,0,0,.32); transform: rotate(-1.5deg); transition: transform .45s var(--ease), box-shadow .45s var(--ease); }
     .kassel-frame:hover { transform: rotate(0deg) translateY(-6px); box-shadow: 0 32px 70px rgba(0,0,0,.52); }
     .kassel-frame img { width: 100%; display: block; aspect-ratio: 10 / 7; object-fit: cover; }
-    .kassel-frame-wrap { position: relative; padding: 1.5rem 0 8rem; overflow: visible; }
-    .friendship-tree { position: absolute; left: max(-11rem, calc(50% - 33rem)); bottom: 0; width: min(65vw, 650px); height: 370px; pointer-events: none; z-index: 0; opacity: .92; }
-    .friendship-tree .tree-line { fill: none; stroke: #3a210f; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 3px 3px rgba(0,0,0,.42)); }
-    .friendship-tree .tree-trunk { stroke-width: 25; stroke: #4a2913; } .friendship-tree .branch { stroke-width: 11; stroke: #513016; } .friendship-tree .twig { stroke-width: 5; stroke: #70411c; } .friendship-tree .root { stroke-width: 10; stroke: #64371a; }
-    .friendship-tree .leaf { fill: #334a29; opacity: .94; animation: leafBreathe 4s ease-in-out infinite alternate; }
-    .friendship-tree .leaf--warm { fill: #8a6327; animation-delay: -1.5s; } .friendship-tree .leaf--gold { fill: #d7a942; animation-delay: -2.5s; }
-    .friendship-tree .tree-spark { fill: #f4d77f; filter: drop-shadow(0 0 5px #e8c96a); animation: treeSpark 3s ease-in-out infinite alternate; }
+    .kassel-frame-wrap { position: relative; padding: 1.5rem 0 0; overflow: visible; }
     .kassel-frame-wrap .kassel-frame { position: relative; z-index: 1; }
     .friendship-seal { position: absolute; right: clamp(.8rem, 3vw, 1.8rem); bottom: clamp(.8rem, 3vw, 1.8rem); z-index: 2; width: 88px; height: 88px; display: grid; place-items: center; border: 1px solid rgba(232,201,106,.8); border-radius: 50%; background: rgba(29,20,14,.78); color: var(--accent-warm); box-shadow: 0 0 0 6px rgba(12,11,10,.48), 0 0 25px rgba(232,201,106,.22); backdrop-filter: blur(3px); animation: ancientSeal 4.5s ease-in-out infinite; }
     .friendship-seal::before, .friendship-seal::after { content: ''; position: absolute; width: 28px; height: 39px; border: 2px solid currentColor; border-radius: 50%; top: 22px; opacity: .9; }
     .friendship-seal::before { transform: rotate(-34deg); left: 23px; } .friendship-seal::after { transform: rotate(34deg); right: 23px; }
     .friendship-seal span { position: absolute; bottom: 8px; font: 500 .47rem var(--sans); letter-spacing: .15em; text-transform: uppercase; color: var(--text); }
     @keyframes ancientSeal { 0%, 100% { transform: rotate(-4deg) scale(1); box-shadow: 0 0 0 6px rgba(12,11,10,.48), 0 0 20px rgba(232,201,106,.18); } 50% { transform: rotate(4deg) scale(1.06); box-shadow: 0 0 0 8px rgba(12,11,10,.48), 0 0 38px rgba(232,201,106,.42); } }
-    @keyframes leafBreathe { from { transform: translateY(0) rotate(-2deg); opacity: .7; } to { transform: translateY(-4px) rotate(2deg); opacity: 1; } }
-    @keyframes treeSpark { from { opacity: .3; transform: scale(.7); } to { opacity: 1; transform: scale(1.15); } }
     .gallery-stage { min-height: 480px; position: relative; display: grid; place-items: center; perspective: 1200px; isolation: isolate; }
     .gallery-stage::before { content: ''; position: absolute; width: min(74vw, 520px); aspect-ratio: 1; border: 1px solid rgba(232,201,106,.13); border-radius: 50%; background: radial-gradient(circle, rgba(192,57,43,.12), transparent 65%); animation: galleryGlow 5s ease-in-out infinite alternate; }
     .gallery-ring { position: relative; width: 220px; height: 300px; transform-style: preserve-3d; transition: transform 1s cubic-bezier(.2,.75,.2,1); z-index: 1; }
@@ -245,8 +237,6 @@
       .friendship-seal { width: 70px; height: 70px; }
       .friendship-seal::before, .friendship-seal::after { transform-origin: center; top: 16px; }
       .friendship-seal::before { left: 16px; } .friendship-seal::after { right: 16px; }
-      .kassel-frame-wrap { padding-bottom: 5.5rem; margin-bottom: 2rem; }
-      .friendship-tree { left: -3.5rem; width: 130vw; height: 250px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .reveal { opacity: 1; transform: none; transition: none; }
@@ -256,8 +246,6 @@
       .gallery-stage::before { animation: none; }
       .gallery-ring { transition: none; }
       .friendship-seal { animation: none; }
-      .friendship-tree .leaf { animation: none; }
-      .friendship-tree .tree-spark { animation: none; }
     }
   </style>
 </head>
@@ -530,20 +518,6 @@
       <audio id="memory-music" preload="metadata" loop><source src="audio/fur-elise.mp3" type="audio/mpeg"><source src="audio/fur-elise.ogg" type="audio/ogg"></audio>
     </div>
     <div class="kassel-frame-wrap reveal">
-      <svg class="friendship-tree" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
-        <g class="tree-line">
-          <path class="tree-trunk" d="M185 620 C184 515 171 440 197 347 C215 282 213 218 202 137"/>
-          <path class="twig" d="M179 613 C206 562 224 519 211 458 M202 525 C169 484 150 437 159 395"/>
-          <path class="branch" d="M196 358 C138 312 105 244 116 165 M196 359 C262 310 301 250 284 174 M205 272 C159 235 150 181 171 119 M210 262 C256 222 267 163 252 109"/>
-          <path class="twig" d="M116 165 L73 126 M116 165 L100 102 M284 174 L324 128 M284 174 L301 105 M171 119 L145 76 M252 109 L280 63"/>
-          <path class="root" d="M186 614 C136 649 72 658 26 684 M188 616 C253 651 349 636 430 682 M192 616 C297 611 425 587 532 628 M193 614 C323 585 464 530 602 558 M189 613 C119 598 78 565 34 535 M195 610 C281 582 329 545 367 491"/>
-          <path class="twig" d="M430 682 L477 661 M532 628 L596 649 M602 558 L676 584 M367 491 L402 444 M34 535 L10 498"/>
-        </g>
-        <g class="leaves">
-          <circle class="leaf leaf--warm" cx="55" cy="143" r="26"/><circle class="leaf" cx="78" cy="111" r="29"/><circle class="leaf leaf--gold" cx="107" cy="79" r="22"/><circle class="leaf" cx="127" cy="100" r="32"/><circle class="leaf" cx="154" cy="65" r="31"/><circle class="leaf leaf--warm" cx="188" cy="56" r="35"/><circle class="leaf" cx="224" cy="60" r="36"/><circle class="leaf leaf--gold" cx="252" cy="80" r="23"/><circle class="leaf" cx="280" cy="87" r="33"/><circle class="leaf" cx="309" cy="119" r="31"/><circle class="leaf leaf--warm" cx="341" cy="142" r="26"/><circle class="leaf" cx="83" cy="181" r="27"/><circle class="leaf leaf--gold" cx="119" cy="158" r="20"/><circle class="leaf" cx="146" cy="162" r="31"/><circle class="leaf" cx="181" cy="143" r="37"/><circle class="leaf leaf--warm" cx="221" cy="146" r="31"/><circle class="leaf" cx="257" cy="165" r="35"/><circle class="leaf leaf--gold" cx="291" cy="184" r="21"/><circle class="leaf" cx="326" cy="207" r="25"/>
-        </g>
-        <g><circle class="tree-spark" cx="118" cy="118" r="5"/><circle class="tree-spark" cx="224" cy="103" r="4"/><circle class="tree-spark" cx="302" cy="152" r="5"/><circle class="tree-spark" cx="158" cy="215" r="4"/><circle class="tree-spark" cx="262" cy="218" r="4"/></g>
-      </svg>
       <figure class="kassel-frame" aria-label="A framed tribute to Kassel">
         <img src="Kassel in a Frame/Kassel in a frame.jpeg" alt="Kassel in a frame">
         <span class="friendship-seal" aria-label="Friendship seal"><span>Friends</span></span>
