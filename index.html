@@ -139,14 +139,14 @@
     #student-names { background: var(--bg); }
     .names-heading { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 300; margin-bottom: 1rem; color: var(--text); }
     .names-subhead { font-size: 0.8rem; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 4rem; text-transform: uppercase; }
-    .names-list { list-style: none; border-top: 1px solid rgba(240,234,216,0.08); }
-    .names-list li { border-bottom: 1px solid rgba(240,234,216,0.08); padding: 1.1rem 0; display: flex; align-items: center; gap: 1.5rem; cursor: default; transition: padding-left 0.35s var(--ease); }
-    .names-list li:hover { padding-left: 1rem; }
+    .names-list { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; }
+    .names-list li { min-height: 130px; padding: 1.25rem; display: grid; grid-template-columns: auto minmax(0, 1fr); align-content: start; column-gap: .8rem; row-gap: .55rem; background: var(--surface); border: 1px solid rgba(240,234,216,.1); cursor: default; transition: border-color .35s, background .35s, transform .35s var(--ease); }
+    .names-list li:hover { background: var(--surface-2); border-color: rgba(232,201,106,.45); transform: translateY(-4px); }
     .names-list li:hover .name-num { color: var(--accent); }
     .names-list li:hover .name-text { color: var(--accent-warm); }
     .name-num { font-size: 0.7rem; color: var(--text-dim); letter-spacing: 0.1em; font-family: var(--sans); min-width: 1.8rem; transition: color 0.3s; }
-    .name-text { font-family: var(--serif); font-size: clamp(1.4rem, 2.8vw, 2rem); font-weight: 300; color: var(--text); letter-spacing: 0.01em; transition: color 0.3s; }
-    .name-de { margin-left: auto; font-size: 0.68rem; letter-spacing: 0.12em; color: var(--text-dim); text-transform: uppercase; font-style: italic; font-family: var(--serif); }
+    .name-text { font-family: var(--serif); font-size: clamp(1.4rem, 2.8vw, 2rem); font-weight: 300; color: var(--text); letter-spacing: 0.01em; transition: color 0.3s; line-height: 1.15; }
+    .name-de { grid-column: 2; font-size: 0.68rem; letter-spacing: 0.12em; color: var(--text-dim); text-transform: uppercase; font-style: italic; font-family: var(--serif); line-height: 1.3; }
 
     /* TEACHER LETTER */
     #teacher-letter { background: var(--surface); }
@@ -219,7 +219,10 @@
       .big-quote::before { font-size: 4rem; left: -0.8rem; top: -0.8rem; }
       .deutsch-grid { grid-template-columns: repeat(2, 1fr); gap: 1px; }
       .deutsch-cell { padding: 1.25rem 1rem; }
-      .name-de { display: none; }
+      .names-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; }
+      .names-list li { min-height: 116px; padding: 1rem .85rem; column-gap: .55rem; }
+      .name-text { font-size: 1.4rem; }
+      .name-de { display: block; font-size: .56rem; letter-spacing: .08em; }
       footer { flex-direction: column; text-align: center; gap: 1.5rem; padding: 2.5rem 1.5rem; }
       .fw-word .fw-en { display: none; }
       .gallery-stage { min-height: 360px; transform: scale(.6); transform-origin: center top; margin: 0 0 -3rem; }
