@@ -57,10 +57,8 @@
     .hero-subtitle { font-family: var(--serif); font-size: clamp(1.2rem, 2.5vw, 1.65rem); font-weight: 300; color: var(--text-muted); font-style: italic; line-height: 1.5; margin-bottom: 1.2rem; }
     .hero-german { font-family: var(--serif); font-size: clamp(0.95rem, 1.5vw, 1.1rem); font-style: italic; color: var(--text-dim); margin-bottom: 3rem; border-left: 1px solid var(--accent); padding-left: 1.2rem; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; }
-    .hero-cta { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.82rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text); text-decoration: none; border: 1px solid rgba(240,234,216,0.15); padding: 1rem 2rem; transition: border-color 0.3s, color 0.3s, background 0.3s; }
+    .hero-cta { display: inline-flex; align-items: center; gap: 0.75rem; font-size: 0.82rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text); text-decoration: none; border: 1px solid rgba(240,234,216,0.15); background: transparent; padding: 1rem 2rem; transition: border-color 0.3s, color 0.3s, background 0.3s; }
     .hero-cta:hover { border-color: var(--accent); color: var(--accent-warm); background: rgba(192,57,43,0.05); }
-    .hero-cta--wishes { border-color: rgba(232,201,106,.55); color: var(--accent-warm); }
-    .hero-cta--wishes:hover { background: rgba(232,201,106,.1); border-color: var(--accent-warm); }
     .hero-year { position: absolute; bottom: 3rem; right: clamp(1.5rem, 6vw, 5rem); font-size: 0.7rem; letter-spacing: 0.18em; color: var(--text-dim); text-transform: uppercase; }
     .scroll-indicator { position: absolute; bottom: 3rem; left: clamp(1.5rem, 6vw, 5rem); display: flex; align-items: center; gap: 0.6rem; font-size: 0.68rem; color: var(--text-dim); letter-spacing: 0.15em; text-transform: uppercase; }
     .scroll-line { width: 40px; height: 1px; background: var(--text-dim); position: relative; overflow: hidden; }
@@ -242,6 +240,7 @@
       .fw-word .fw-en { display: none; }
       .gallery-stage { min-height: 360px; transform: scale(.6); transform-origin: center top; margin: 0 0 -3rem; }
       .gallery-card { transform: rotateY(calc(var(--i) * 27.692deg)) translateZ(400px); }
+      .gallery-card span { display: none; }
       .music-bar { margin: 2.5rem auto 0; flex-direction: column; gap: 0.5rem; }
       .friendship-seal { width: 70px; height: 70px; }
       .friendship-seal::before, .friendship-seal::after { transform-origin: center; top: 16px; }
