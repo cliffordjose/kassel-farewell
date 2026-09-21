@@ -87,17 +87,6 @@
     .level-node.active { color: var(--text); }
     .level-arrow { color: var(--accent); font-size: 1rem; opacity: 0.5; }
 
-    /* GERMAN JOURNEY */
-    #german-journey { background: var(--bg); }
-    .gj-heading { font-family: var(--serif); font-size: clamp(2rem, 4.5vw, 3.5rem); font-weight: 300; line-height: 1.2; margin-bottom: 2rem; }
-    .gj-body { font-size: 1.05rem; color: var(--text-muted); max-width: 600px; margin-bottom: 4rem; line-height: 1.8; }
-    .gj-pillars { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--text-dim); max-width: 600px; margin-bottom: 3rem; }
-    .gj-pillar { background: var(--bg); padding: 2rem 2.5rem; transition: background 0.3s; }
-    .gj-pillar:hover { background: var(--surface-2); }
-    .gj-pillar .pillar-de { font-family: var(--serif); font-size: 1.8rem; font-weight: 300; font-style: italic; color: var(--text); display: block; margin-bottom: 0.25rem; }
-    .gj-pillar .pillar-en { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
-    .gj-quote { font-family: var(--serif); font-size: clamp(1.15rem, 2vw, 1.4rem); font-style: italic; color: var(--accent-warm); max-width: 580px; line-height: 1.6; border-left: 1px solid var(--accent); padding-left: 1.5rem; }
-
     /* GERMANY DREAM */
     #germany-dream { background: var(--surface); text-align: center; }
     .germany-flag-bar { display: flex; height: 4px; width: 60px; margin: 0 auto 3rem; overflow: hidden; border-radius: 2px; }
@@ -227,7 +216,6 @@
       .scroll-indicator { display: none; }
       .big-quote { padding-left: 1rem; }
       .big-quote::before { font-size: 4rem; left: -0.8rem; top: -0.8rem; }
-      .gj-pillars { grid-template-columns: 1fr; }
       .deutsch-grid { grid-template-columns: repeat(2, 1fr); gap: 1px; }
       .deutsch-cell { padding: 1.25rem 1rem; }
       .name-de { display: none; }
@@ -434,24 +422,6 @@
       <span class="level-node active">B1</span><span class="level-arrow">&#8594;</span>
       <span class="level-node">B2</span>
     </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- GERMAN JOURNEY -->
-<section id="german-journey">
-  <div class="inner">
-    <span class="label reveal">More Than a Language</span>
-    <h2 class="gj-heading reveal">German Was Never<br><em style="font-style:italic;font-family:var(--serif)">Just a Language.</em></h2>
-    <p class="gj-body reveal reveal-delay-1">Learning German was also learning to dream in a different language. Every vocabulary list, every grammar rule, every awkward conversation &mdash; it was all pointing somewhere.</p>
-    <div class="gj-pillars reveal reveal-delay-2">
-      <div class="gj-pillar"><span class="pillar-de">Ausbildung</span><span class="pillar-en">Vocational Training</span></div>
-      <div class="gj-pillar"><span class="pillar-de">Universit&auml;t</span><span class="pillar-en">University</span></div>
-      <div class="gj-pillar"><span class="pillar-de">Beruf</span><span class="pillar-en">Career</span></div>
-      <div class="gj-pillar"><span class="pillar-de">Ein neues Leben</span><span class="pillar-en">A New Life in Germany</span></div>
-    </div>
-    <p class="gj-quote reveal reveal-delay-3">&ldquo;German was not simply something we studied. It was a bridge toward the lives they dreamed of.&rdquo;</p>
   </div>
 </section>
 
