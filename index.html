@@ -127,11 +127,6 @@
     .kassel-frame img { width: 100%; display: block; aspect-ratio: 10 / 7; object-fit: cover; }
     .kassel-frame-wrap { position: relative; padding: 1.5rem 0 0; overflow: visible; }
     .kassel-frame-wrap .kassel-frame { position: relative; z-index: 1; }
-    .friendship-seal { position: absolute; right: clamp(.8rem, 3vw, 1.8rem); bottom: clamp(.8rem, 3vw, 1.8rem); z-index: 2; width: 88px; height: 88px; display: grid; place-items: center; border: 1px solid rgba(232,201,106,.8); border-radius: 50%; background: rgba(29,20,14,.78); color: var(--accent-warm); box-shadow: 0 0 0 6px rgba(12,11,10,.48), 0 0 25px rgba(232,201,106,.22); backdrop-filter: blur(3px); animation: ancientSeal 4.5s ease-in-out infinite; }
-    .friendship-seal::before, .friendship-seal::after { content: ''; position: absolute; width: 28px; height: 39px; border: 2px solid currentColor; border-radius: 50%; top: 22px; opacity: .9; }
-    .friendship-seal::before { transform: rotate(-34deg); left: 23px; } .friendship-seal::after { transform: rotate(34deg); right: 23px; }
-    .friendship-seal span { position: absolute; bottom: 8px; font: 500 .47rem var(--sans); letter-spacing: .15em; text-transform: uppercase; color: var(--text); }
-    @keyframes ancientSeal { 0%, 100% { transform: rotate(-4deg) scale(1); box-shadow: 0 0 0 6px rgba(12,11,10,.48), 0 0 20px rgba(232,201,106,.18); } 50% { transform: rotate(4deg) scale(1.06); box-shadow: 0 0 0 8px rgba(12,11,10,.48), 0 0 38px rgba(232,201,106,.42); } }
     .gallery-stage { min-height: 480px; position: relative; display: grid; place-items: center; perspective: 1200px; isolation: isolate; }
     .gallery-stage::before { content: ''; position: absolute; width: min(74vw, 520px); aspect-ratio: 1; border: 1px solid rgba(232,201,106,.13); border-radius: 50%; background: radial-gradient(circle, rgba(192,57,43,.12), transparent 65%); animation: galleryGlow 5s ease-in-out infinite alternate; }
     .gallery-ring { position: relative; width: 220px; height: 300px; transform-style: preserve-3d; transition: transform 1s cubic-bezier(.2,.75,.2,1); z-index: 1; }
@@ -235,9 +230,6 @@
       .gallery-card { transform: rotateY(calc(var(--i) * 27.692deg)) translateZ(400px); }
       .gallery-card span { display: none; }
       .music-bar { margin: 2.5rem auto 0; flex-direction: column; gap: 0.5rem; }
-      .friendship-seal { width: 70px; height: 70px; }
-      .friendship-seal::before, .friendship-seal::after { transform-origin: center; top: 16px; }
-      .friendship-seal::before { left: 16px; } .friendship-seal::after { right: 16px; }
     }
     @media (prefers-reduced-motion: reduce) {
       .reveal { opacity: 1; transform: none; transition: none; }
@@ -246,7 +238,6 @@
       .scroll-line::after { animation: none; }
       .gallery-stage::before { animation: none; }
       .gallery-ring { transition: none; }
-      .friendship-seal { animation: none; }
     }
   </style>
 </head>
@@ -521,7 +512,6 @@
     <div class="kassel-frame-wrap reveal">
       <figure class="kassel-frame" aria-label="A framed tribute to Kassel">
         <img src="Kassel in a Frame/Kassel in a frame.jpeg" alt="Kassel in a frame">
-        <span class="friendship-seal" aria-label="Friendship seal"><span>Friends</span></span>
       </figure>
       <figure class="kassel-frame" aria-label="A second framed Kassel memory">
         <img src="Kassel in a Frame/Kassel in a Frame (2).jpeg" alt="Kassel batch group photo">
